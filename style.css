@@ -1,5 +1,3 @@
-/* General Reset */
-/* Global Reset and Setup */
 body, h1, h2, h3, p, ul, li, img, a {
   margin: 0;
   padding: 0;
@@ -198,12 +196,145 @@ nav ul li a:hover {
   text-shadow: 0 0 10px #5a4dff;
 }
 
+.story:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(140, 103, 255, 0.7);
+}
+
+.story img {
+  width: 150px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: 0.3s ease;
+}
+
+.story img:hover {
+  transform: scale(1.2);
+}
+
+
+/* ourStories Section */
+.Ostories {
+  max-width: 1000px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.Ostories h2 {
+  font-size: 3rem;
+  color: #ffffff;
+  text-shadow: 0 0 20px #5a4dff, 0 0 30px #ff94cc;
+  margin-bottom: 40px;
+}
+
+.Ostory {
+  background: rgba(155, 65, 197, 0.9);
+  padding: 30px;
+  margin: 20px 0;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px #dd9ff8;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.Ostory img {
+  width: 150px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 3px solid #5a4dff;
+}
+
+.Ostory h3 {
+  font-size: 2rem;
+  color: #ffffff;
+  text-shadow: 0 0 15px #ff94cc;
+}
+
+.Ostory p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #c7b7ff;
+}
+
+.Ostory p strong {
+  color: #ce8dae;
+  text-shadow: 0 0 10px #5a4dff;
+}
+.Ostory:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(140, 103, 255, 0.7);
+}
+
+.Ostory img {
+  width: 150px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: 0.3s ease;
+}
+
+.Ostory img:hover {
+  transform: scale(1.1);
+}
 /* Footer */
 footer {
-  background: linear-gradient(90deg, #1a0033, #2b0050);
+  background: linear-gradient(90deg, #6e25b3, #2b0050);
   text-align: center;
   padding: 20px 0;
   font-size: 1rem;
   color: #c7b7ff;
   border-top: 4px solid #8e44ad;
+}
+.content p {
+  font-size: 1.1rem;
+  color: #d8d8ff;
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(140, 103, 255, 0.7);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+}
+
+.card h3 {
+  font-size: 1.8rem;
+  color: #a394ff;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #d8d8ff;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
