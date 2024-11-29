@@ -143,3 +143,50 @@ footer {
   border-top: 3px solid #5a4dff;
   margin-top: 30px;
 }
+
+/* Stories Section */
+.stories {
+  max-width: 900px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.stories h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #f4f4ff;
+}
+
+.story {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.story img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  border: 3px solid #5a4dff;
+}
+
+.story h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #d6d6f5;
+}
+
+.story p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #c7c7db;
+}
+
+.story p strong {
+  color: #ff94cc;
+}
+
