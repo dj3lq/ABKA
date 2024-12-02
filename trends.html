@@ -23,17 +23,17 @@
 
     body {
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #0f0f1e, #28284a);
-      color: #e8e8ff;
+      background: linear-gradient(135deg, #121224, #1e1e40);
+      color: #f0f0ff;
       line-height: 1.8;
       overflow-x: hidden;
     }
 
     /* Header */
     header {
-      background: rgba(15, 15, 30, 0.9);
-      border-bottom: 3px solid #8c67ff;
-      padding: 20px;
+      background: rgba(30, 30, 60, 0.95);
+      border-bottom: 3px solid #6c5ce7;
+      padding: 20px 15px;
       text-align: center;
       position: sticky;
       top: 0;
@@ -42,7 +42,7 @@
 
     header h1 {
       font-size: 2.5rem;
-      color: #8c67ff;
+      color: #6c5ce7;
       margin-bottom: 10px;
       letter-spacing: 2px;
       text-transform: uppercase;
@@ -57,65 +57,93 @@
 
     nav ul li a {
       text-decoration: none;
-      color: #e8e8ff;
-      font-size: 1.2rem;
-      padding: 10px 15px;
+      color: #f0f0ff;
+      font-size: 1.1rem;
+      padding: 8px 15px;
       border-radius: 8px;
       transition: all 0.3s ease;
     }
 
     nav ul li a:hover {
-      background: #8c67ff;
-      color: #0f0f1e;
+      background: #6c5ce7;
+      color: #0e0e1c;
       transform: scale(1.1);
     }
 
-    /* Intro Section */
+    /* Content Section */
     .content {
       max-width: 1200px;
-      margin: 50px auto;
-      padding: 40px;
+      margin: 60px auto;
+      padding: 30px;
       background: rgba(255, 255, 255, 0.1);
       border-radius: 15px;
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
       animation: fadeIn 1s ease-in-out;
     }
 
     .content h2 {
       font-size: 2.5rem;
-      color: #a394ff;
+      color: #8c7aff;
       margin-bottom: 20px;
       text-align: center;
     }
 
-    .content p, .content ul {
-      font-size: 1.2rem;
-      color: #d8d8ff;
-      line-height: 1.8;
+    .content p {
+      font-size: 1.1rem;
+      color: #dcdcff;
       margin-bottom: 20px;
+      line-height: 1.8;
     }
 
-    .content ul {
-      list-style: disc;
-      padding-left: 20px;
+    /* Grid for Trends */
+    .trends-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
     }
 
-    .content ul li {
-      margin-bottom: 10px;
+    .trend-item {
+      background: rgba(40, 40, 60, 0.8);
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
     }
 
-    .content ul li strong {
-      color: #8c67ff;
+    .trend-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .trend-item img {
+      width: 90%;
+      height: auto;
+      margin: 15px auto;
+      border-radius: 10px;
+    }
+
+    .trend-item h3 {
+      font-size: 1.5rem;
+      color: #7d6dfd;
+      margin: 15px 0;
+    }
+
+    .trend-item p {
+      padding: 0 15px 20px;
+      font-size: 1rem;
+      color: #ccccff;
     }
 
     /* Footer */
     footer {
-      background: rgba(15, 15, 30, 0.9);
+      background: rgba(30, 30, 60, 0.95);
       text-align: center;
       padding: 15px 0;
       font-size: 1rem;
       color: #aaa;
-      border-top: 3px solid #8c67ff;
+      border-top: 3px solid #6c5ce7;
       margin-top: 50px;
     }
 
@@ -143,7 +171,6 @@
 
       nav ul li a {
         font-size: 1rem;
-        padding: 8px 12px;
       }
 
       .content {
@@ -153,16 +180,10 @@
       .content h2 {
         font-size: 2rem;
       }
-
-      .content p, .content ul {
-        font-size: 1rem;
-      }
     }
   </style>
 </head>
 <body>
-  <iframe class="hiddenFrame" width="560" height="315"
-  src="https://www.youtube.com/embed/ESe5OWELD2I?autoplay=1"frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   <!-- Header Section -->
   <header>
     <h1>Holborn 2034</h1>
@@ -182,14 +203,33 @@
     <section class="content">
       <h2>Trends Shaping Holborn's Future</h2>
       <p>By 2034, Holborn has become a blend of the historical and the futuristic. Key trends driving this transformation include:</p>
-      <ul>
-        <li><strong>Green Innovations:</strong> Vertical gardens and urban farms have turned rooftops and old office buildings into sustainable ecosystems. Lincoln’s Inn Fields now hosts a solar-powered bio-dome.</li>
-        <li><strong>AI-Powered Communities:</strong> Holborn's neighborhoods are now hubs of AI-enhanced living, where everything from transportation to public services operates on advanced neural networks.</li>
-        <li><strong>Mixed-Reality Spaces:</strong> Augmented reality (AR) and virtual reality (VR) have redefined how people interact with historical landmarks, enabling immersive experiences of Holborn's past and speculative futures.</li>
-        <li><strong>Hydrogen-Powered Transport:</strong> With a focus on clean energy, Holborn has embraced hydrogen-powered buses and autonomous air taxis, redefining urban mobility.</li>
-        <li><strong>Adaptive Architecture:</strong> Buildings in Holborn are designed with smart materials, allowing structures to self-repair and adapt to environmental conditions.</li>
-      </ul>
-      <p>These trends showcase how Holborn is embracing a future of sustainability, innovation, and immersive experiences while preserving its historic charm.</p>
+      <div class="trends-grid">
+        <div class="trend-item">
+          <img src="images/green-innovations.jpg" alt="Green Innovations">
+          <h3>Green Innovations</h3>
+          <p>Vertical gardens and urban farms have turned rooftops and old office buildings into sustainable ecosystems. Lincoln’s Inn Fields now hosts a solar-powered bio-dome.</p>
+        </div>
+        <div class="trend-item">
+          <img src="images/ai-powered-communities.jpg" alt="AI-Powered Communities">
+          <h3>AI-Powered Communities</h3>
+          <p>Holborn's neighborhoods are now hubs of AI-enhanced living, where everything from transportation to public services operates on advanced neural networks.</p>
+        </div>
+        <div class="trend-item">
+          <img src="images/mixed-reality-spaces.jpg" alt="Mixed-Reality Spaces">
+          <h3>Mixed-Reality Spaces</h3>
+          <p>Augmented reality (AR) and virtual reality (VR) have redefined how people interact with historical landmarks, enabling immersive experiences of Holborn's past and speculative futures.</p>
+        </div>
+        <div class="trend-item">
+          <img src="images/hydrogen-powered-transport.jpg" alt="Hydrogen-Powered Transport">
+          <h3>Hydrogen-Powered Transport</h3>
+          <p>With a focus on clean energy, Holborn has embraced hydrogen-powered buses and autonomous air taxis, redefining urban mobility.</p>
+        </div>
+        <div class="trend-item">
+          <img src="images/adaptive-architecture.jpg" alt="Adaptive Architecture">
+          <h3>Adaptive Architecture</h3>
+          <p>Buildings in Holborn are designed with smart materials, allowing structures to self-repair and adapt to environmental conditions.</p>
+        </div>
+      </div>
     </section>
   </main>
 
