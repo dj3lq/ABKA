@@ -1,1 +1,357 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forum | Holborn 2035</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* General Reset */
+    body, h1, p, ul, li, input, button {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #121224, #1e1e40);
+      color: #f0f0ff;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      background: rgba(30, 30, 60, 0.95);
+      border-bottom: 3px solid #6c5ce7;
+      padding: 20px 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #6c5ce7;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #f0f0ff;
+      font-size: 1.1rem;
+      padding: 8px 15px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background: #6c5ce7;
+      color: #0e0e1c;
+      transform: scale(1.1);
+    }
+
+    /* Forum Section */
+    .forum-container {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .forum-container h2 {
+      font-size: 2.5rem;
+      color: #8c7aff;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .chat-log {
+      list-style: none;
+      margin: 20px 0;
+      padding: 0;
+    }
+
+    .chat-item {
+      background: rgba(40, 40, 60, 0.8);
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .chat-item .content {
+      max-width: 90%;
+    }
+
+    .chat-item span {
+      font-weight: bold;
+      color: #7d6dfd;
+      font-size: 1.1rem;
+    }
+
+    .chat-item .timestamp {
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    .chat-item p {
+      color: #ccccff;
+      margin-top: 5px;
+    }
+
+    /* Reply Section */
+    .reply {
+      margin-left: 30px;
+      border-left: 3px solid #6c5ce7;
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    .like-dislike {
+      display: flex;
+      gap: 10px;
+      margin-top: 5px;
+    }
+
+    .like-dislike button {
+      background: #6c5ce7;
+      color: #0e0e1c;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .like-dislike button:hover {
+      background: #4b3dc4;
+    }
+
+    /* New Comment Section */
+    .new-comment {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .new-comment input {
+      flex: 1;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #6c5ce7;
+      background: rgba(0, 0, 0, 0.2);
+      color: #f0f0ff;
+    }
+
+    .new-comment button {
+      padding: 10px 15px;
+      background: #6c5ce7;
+      color: #0e0e1c;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .new-comment button:hover {
+      background: #4b3dc4;
+    }
+
+    /* Footer */
+    footer {
+      background: rgba(30, 30, 60, 0.95);
+      text-align: center;
+      padding: 15px 0;
+      font-size: 1rem;
+      color: #aaa;
+      border-top: 3px solid #6c5ce7;
+      margin-top: 50px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Holborn 2035</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trends.html">Future Trends</a></li>
+        <li><a href="places.html">Landmarks</a></li>
+        <li><a href="stories.html">Archive</a></li>
+        <li><a href="forum.html">Forum</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Forum Section -->
+  <main>
+    <section class="forum-container">
+      <h2>Forum: Holborn 2035 Citizens</h2>
+      <ul class="chat-log" id="chat-log">
+        <!-- Pre-existing chat logs will be displayed here -->
+      </ul>
+
+      <div class="new-comment">
+        <input type="text" id="commentInput" placeholder="Join the conversation...">
+        <button onclick="postComment()">Post Comment</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>© 2035 Holborn 2035 | Preserving History, Embracing the Future.</p>
+  </footer>
+
+  <script>
+    // Social Media-like usernames
+    const usernames = [
+      "@BookLover22", "@FictionFan", "@TheReadingWizard", 
+      "@SciFiQueen", "@NovelExplorer", "@PageTurner", 
+      "@HolbornHistorian", "@LitCritic_101", "@FutureOfBooks", "@StorySeeker"
+    ];
+
+    // Function to generate random time
+    function generateRandomTime() {
+      const hours = Math.floor(Math.random() * 24);
+      const minutes = Math.floor(Math.random() * 60);
+      const suffix = hours >= 12 ? 'PM' : 'AM';
+      const formattedHours = hours % 12 || 12;
+      const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
+      return `${formattedHours}:${formattedMinutes} ${suffix}`;
+    }
+
+    // Dummy comments about books in the archives with likes and dislikes
+    const comments = [
+      { 
+        user: "@BookLover22", text: "I just finished reading the newly discovered texts about Holborn's 19th century underground libraries. Amazing!", 
+        time: generateRandomTime(), likes: 15, dislikes: 2, replies: [] 
+      },
+      { 
+        user: "@FictionFan", text: "Has anyone else read the Holborn Chronicles? The section on early artificial intelligence is mind-blowing.", 
+        time: generateRandomTime(), likes: 25, dislikes: 5, replies: [
+          { user: "@SciFiQueen", text: "Yes, I loved that part! It felt so futuristic even though it was written so long ago.", time: generateRandomTime(), likes: 10, dislikes: 1 }
+        ] 
+      },
+      { 
+        user: "@TheReadingWizard", text: "I’ve been diving into the memoirs from the 2030s. The perspective on the city's transformation is incredible.", 
+        time: generateRandomTime(), likes: 30, dislikes: 3, replies: [] 
+      },
+      { 
+        user: "@SciFiQueen", text: "I just started reading ‘The Future We Built’ from the archives. It's fascinating to see how people imagined the world we now live in.", 
+        time: generateRandomTime(), likes: 8, dislikes: 0, replies: [
+          { user: "@BookLover22", text: "Oh, I loved that book! It’s eerie how many predictions came true.", time: generateRandomTime(), likes: 4, dislikes: 0 }
+        ]
+      },
+      { 
+        user: "@NovelExplorer", text: "Anyone else read about Holborn’s role in the climate crisis archives? There’s some fascinating data on sustainable tech from 2029.", 
+        time: generateRandomTime(), likes: 14, dislikes: 3, replies: [] 
+      },
+      { 
+        user: "@StorySeeker", text: "I just uncovered an archived play written in the 2030s about a utopian society. It's almost chilling how accurate it seems now!", 
+        time: generateRandomTime(), likes: 20, dislikes: 0, replies: [
+          { user: "@PageTurner", text: "I’ve read that too. It’s so surreal how it predicted many of our current issues.", time: generateRandomTime(), likes: 12, dislikes: 1 }
+        ]
+      }
+    ];
+
+    // Function to load dummy chat logs
+    function loadComments() {
+      const chatLog = document.getElementById('chat-log');
+      chatLog.innerHTML = ''; // Clear current log
+      comments.forEach(comment => {
+        const commentItem = document.createElement('li');
+        commentItem.classList.add('chat-item');
+        commentItem.innerHTML = `
+          <div class="content">
+            <span>${comment.user}</span>
+            <div class="timestamp">${comment.time}</div>
+            <p>${comment.text}</p>
+            <div class="like-dislike">
+              <button onclick="likeComment(${comments.indexOf(comment)})">Like (${comment.likes})</button>
+              <button onclick="dislikeComment(${comments.indexOf(comment)})">Dislike (${comment.dislikes})</button>
+            </div>
+          </div>
+        `;
+        
+        if (comment.replies.length > 0) {
+          comment.replies.forEach(reply => {
+            const replyItem = document.createElement('li');
+            replyItem.classList.add('reply');
+            replyItem.innerHTML = `
+              <div class="content">
+                <span>${reply.user}</span>
+                <div class="timestamp">${reply.time}</div>
+                <p>${reply.text}</p>
+                <div class="like-dislike">
+                  <button onclick="likeComment(${comments.indexOf(comment)})">Like (${reply.likes})</button>
+                  <button onclick="dislikeComment(${comments.indexOf(comment)})">Dislike (${reply.dislikes})</button>
+                </div>
+              </div>
+            `;
+            commentItem.appendChild(replyItem);
+          });
+        }
+
+        chatLog.appendChild(commentItem);
+      });
+    }
+
+    // Function to like a comment
+    function likeComment(index) {
+      comments[index].likes++;
+      loadComments(); // Refresh the comments display
+    }
+
+    // Function to dislike a comment
+    function dislikeComment(index) {
+      comments[index].dislikes++;
+      loadComments(); // Refresh the comments display
+    }
+
+    // Function to post new comment
+    function postComment() {
+      const input = document.getElementById('commentInput');
+      if (input.value.trim() !== "") {
+        const newComment = {
+          user: usernames[Math.floor(Math.random() * usernames.length)],
+          text: input.value,
+          time: generateRandomTime(),
+          likes: 0,
+          dislikes: 0,
+          replies: []
+        };
+        comments.push(newComment);
+        input.value = ""; // Clear input
+        loadComments(); // Reload the comments to include the new one
+      }
+    }
+
+    // Initial load of comments
+    loadComments();
+  </script>
+</body>
+</html>
