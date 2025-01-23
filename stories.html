@@ -1,31 +1,178 @@
-<head>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<style>
-  @import url("css/style.css");
-</style>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | Holborn 2034</title>
+  <title>Stories | Holborn 2035</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #121224, #1e1e40);
+      color: #f0f0ff;
+      line-height: 1.8;
+    }
+
+    header {
+      background: rgba(30, 30, 60, 0.95);
+      border-bottom: 3px solid #6c5ce7;
+      padding: 20px 15px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #6c5ce7;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #f0f0ff;
+      font-size: 1.1rem;
+      padding: 8px 15px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background: #6c5ce7;
+      color: #0e0e1c;
+      transform: scale(1.1);
+    }
+
+    .stories {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .stories h2 {
+      font-size: 2.5rem;
+      color: #8c7aff;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .story {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 30px;
+      padding: 15px;
+      background: rgba(30, 30, 60, 0.8);
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .story:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .story img {
+      width: 150px;
+      height: auto;
+      margin-right: 20px;
+      border-radius: 10px;
+    }
+
+    .story h3 {
+      font-size: 1.8rem;
+      color: #7d6dfd;
+      margin-bottom: 10px;
+    }
+
+    .story p {
+      font-size: 1rem;
+      color: #dcdcff;
+      margin-bottom: 8px;
+    }
+
+    .story .details {
+      display: none;
+      margin-top: 10px;
+    }
+
+    .story.active .details {
+      display: block;
+    }
+
+    .reviews {
+      margin-top: 15px;
+      border-top: 1px solid #6c5ce7;
+      padding-top: 10px;
+    }
+
+    .reviews h4 {
+      font-size: 1.2rem;
+      color: #9e8cff;
+      margin-bottom: 10px;
+    }
+
+    .reviews p {
+      font-size: 0.9rem;
+      color: #cfcfff;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      background: rgba(30, 30, 60, 0.95);
+      text-align: center;
+      padding: 15px 0;
+      font-size: 1rem;
+      color: #aaa;
+      border-top: 3px solid #6c5ce7;
+      margin-top: 50px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .story {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .story img {
+        margin: 0 0 15px 0;
+      }
+
+      .stories {
+        padding: 15px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <iframe class="hiddenFrame" width="560" height="315"
-  src="https://www.youtube.com/embed/n61ULEU7CO0?autoplay=1"frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   <header>
     <h1>Holborn 2035</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="trends.html">Trends</a></li>
-        <li><a href="places.html">Places</a></li>
+        <li><a href="trends.html">Future Trends</a></li>
+        <li><a href="places.html">Landmarks</a></li>
         <li><a href="stories.html">Archive</a></li>
-         <li><a href="forum.html">Forum</a></li>
+        <li><a href="forum.html">Forum</a></li>
         <li><a href="about.html">About Us</a></li>
       </ul>
     </nav>
@@ -34,94 +181,178 @@
   <main>
     <section class="stories">
       <h2>Archive</h2>
-
-      <!-- Story Cards -->
-      <div class="story">
-        <img src="images/detroit.jpg" alt="Detroit becomes human">
-        <h3>Detroit becomes human</h3>
-        <p><strong>Creator:</strong>Quantic Dream</p>
-        <p><strong>Plot Summary:</strong> Detroit 2038. Technology has evolved to a point where human like androids are everywhere. They speak, move and behave like human beings, but they are only machines serving humans. Play three distinct androids and see a world at the brink of chaos – perhaps our future - through their eyes..</p>
-        <p><strong>Relevance:</strong>...</p>
+  
+      <div class="story" onclick="toggleDetails(this)">
+        <img src="images/detroit.jpg" alt="Detroit Becomes Human">
+        <div>
+          <h3>Detroit Becomes Human</h3>
+          <p><strong>Creator:</strong> Quantic Dream</p>
+          <p><strong>Plot Summary:</strong> Detroit 2038. Technology has evolved to a point where human-like androids are everywhere.</p>
+          <div class="details">
+            <p>They speak, move, and behave like humans but serve humanity. Play three distinct androids and see a world on the brink of chaos.</p>
+            <p><strong>Relevance:</strong> Explores ethical questions around artificial intelligence and its role in society.</p>
+            <div class="reviews">
+              <h4>User Reviews:</h4>
+              <p>"A fascinating exploration of what it means to be human in a world dominated by technology." – Alex</p>
+              <p>"The story is gripping and raises important questions about AI ethics." – Jamie</p>
+            </div>
+          </div>
+        </div>
       </div>
-      
-      <div class="story">
+  
+      <div class="story" onclick="toggleDetails(this)">
         <img src="images/frankenstein.jpg" alt="Frankenstein">
-        <h3>Frankenstein</h3>
-        <p><strong>Author:</strong> Mary Shelley</p>
-        <p><strong>Plot Summary:</strong> A scientist's quest to create life leads to tragedy and a profound exploration of human ambition, morality, and alienation.</p>
-        <p><strong>Relevance:</strong>...</p>
+        <div>
+          <h3>Frankenstein</h3>
+          <p><strong>Author:</strong> Mary Shelley</p>
+          <p><strong>Plot Summary:</strong> A scientist's quest to create life leads to tragedy.</p>
+          <div class="details">
+            <p>It explores human ambition, morality, and alienation in the pursuit of knowledge.</p>
+            <p><strong>Relevance:</strong> Reflects on the responsibilities of creators and ethical implications of their work.</p>
+            <div class="reviews">
+              <h4>User Reviews:</h4>
+              <p>"Still relevant today – raises questions about the limits of science." – Taylor</p>
+              <p>"A timeless classic that explores the human condition." – Morgan</p>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div class="story">
+  
+      <div class="story" onclick="toggleDetails(this)">
         <img src="images/neuromancer.jpg" alt="Neuromancer">
-        <h3>Neuromancer</h3>
-        <p><strong>Author:</strong> William Gibson</p>
-        <p><strong>Plot Summary:</strong> A cyberpunk classic that delves into a dystopian world of artificial intelligence and cyberspace.</p>
-        <p><strong>Relevance:</strong>...</p>
+        <div>
+          <h3>Neuromancer</h3>
+          <p><strong>Author:</strong> William Gibson</p>
+          <p><strong>Plot Summary:</strong> A cyberpunk classic that delves into a dystopian world of artificial intelligence and cyberspace.</p>
+          <div class="details">
+            <p>Set in a gritty future, it questions the balance between technology and humanity.</p>
+            <p><strong>Relevance:</strong> A foundational work in the cyberpunk genre, it shaped ideas of virtual reality and AI.</p>
+            <div class="reviews">
+              <h4>User Reviews:</h4>
+              <p>"The origin of cyberpunk – a must-read for tech enthusiasts." – Riley</p>
+              <p>"A dense but rewarding exploration of AI and digital culture." – Sam</p>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div class="story">
+  
+      <div class="story" onclick="toggleDetails(this)">
         <img src="images/handmaids_tale.jpg" alt="The Handmaid's Tale">
-        <h3>The Handmaid's Tale</h3>
-        <p><strong>Author:</strong> Margaret Atwood</p>
-        <p><strong>Plot Summary:</strong> In a totalitarian society, women are stripped of their rights, and the story follows Offred, a Handmaid forced into servitude.</p>
-        <p><strong>Relevance:</strong>...</p>
+        <div>
+          <h3>The Handmaid's Tale</h3>
+          <p><strong>Author:</strong> Margaret Atwood</p>
+          <p><strong>Plot Summary:</strong> In a totalitarian society, women are stripped of their rights, and the story follows Offred, a Handmaid forced into servitude.</p>
+          <div class="details">
+            <p>It delves into themes of oppression, resistance, and the power of narrative.</p>
+            <p><strong>Relevance:</strong> A chilling warning about the erosion of rights and freedoms.</p>
+            <div class="reviews">
+              <h4>User Reviews:</h4>
+              <p>"Powerful and unsettling – feels eerily relevant today." – Avery</p>
+              <p>"A haunting reminder of the importance of vigilance and resistance." – Jordan</p>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div class="story">
+  
+      <div class="story" onclick="toggleDetails(this)">
         <img src="images/hunger_games.jpg" alt="The Hunger Games">
-        <h3>The Hunger Games</h3>
-        <p><strong>Author:</strong> Suzanne Collins</p>
-        <p><strong>Plot Summary:</strong> In a dystopian future, Katniss Everdeen must navigate survival in a deadly televised competition.</p>
-        <p><strong>Relevance:</strong>...</p>
+        <div>
+          <h3>The Hunger Games</h3>
+          <p><strong>Author:</strong> Suzanne Collins</p>
+          <p><strong>Plot Summary:</strong> In a dystopian future, Katniss Everdeen must navigate survival in a deadly televised competition.</p>
+          <div class="details">
+            <p>The story explores themes of power, resistance, and survival under an oppressive regime.</p>
+            <p><strong>Relevance:</strong> A sharp critique of media, class divisions, and authoritarianism.</p>
+            <div class="reviews">
+              <h4>User Reviews:</h4>
+              <p>"A gripping tale of rebellion and survival." – Casey</p>
+              <p>"The social commentary feels incredibly prescient." – Drew</p>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div class="story">
+  
+      <div class="story" onclick="toggleDetails(this)">
         <img src="images/brave_new_world.jpg" alt="Brave New World">
-        <h3>Brave New World</h3>
-        <p><strong>Author:</strong> Aldous Huxley</p>
-        <p><strong>Plot Summary:</strong> A world of engineered conformity and pleasure challenges the boundaries of individuality and freedom.</p>
-        <p><strong>Relevance:</strong>...</p>
+        <div>
+          <h3>Brave New World</h3>
+          <p><strong>Author:</strong> Aldous Huxley</p>
+          <p><strong>Plot Summary:</strong> A world of engineered conformity and pleasure challenges the boundaries of individuality and freedom.</p>
+          <div class="details">
+            <p>It critiques the dangers of technological and social control.</p>
+            <p><strong>Relevance:</strong> Examines the consequences of sacrificing individuality for stability.</p>
+            <div class="reviews">
+              <h4>User Reviews:</h4>
+              <p>"A cautionary tale that's still incredibly thought-provoking." – Quinn</p>
+              <p>"Explores themes of freedom and control in an unforgettable way." – Blair</p>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div class="story">
+  
+      <div class="story" onclick="toggleDetails(this)">
         <img src="images/1984.jpg" alt="1984">
-        <h3>1984</h3>
-        <p><strong>Author:</strong> George Orwell</p>
-        <p><strong>Plot Summary:</strong> A chilling depiction of a totalitarian regime where Big Brother watches everything and individuality is erased.</p>
-        <p><strong>Relevance:</strong>...</p>
+        <div>
+          <h3>1984</h3>
+          <p><strong>Author:</strong> George Orwell</p>
+          <p><strong>Plot Summary:</strong> A chilling depiction of a totalitarian regime where Big Brother watches everything and individuality is erased.</p>
+          <div class="details">
+            <p>The novel warns against the dangers of authoritarianism and mass surveillance.</p>
+            <p><strong>Relevance:</strong> A perennial reminder of the fragility of freedom and privacy.</p>
+            <div class="reviews">
+              <h4>User Reviews:</h4>
+              <p>"Feels like a prophetic warning – a true masterpiece." – Taylor</p>
+              <p>"Orwell's vision of the future is as relevant as ever." – Blake</p>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div class="story">
+  
+      <div class="story" onclick="toggleDetails(this)">
         <img src="images/fahrenheit_451.jpg" alt="Fahrenheit 451">
-        <h3>Fahrenheit 451</h3>
-        <p><strong>Author:</strong> Ray Bradbury</p>
-        <p><strong>Plot Summary:</strong> In a future where books are outlawed, a fireman begins to question the oppressive society he serves.</p>
-        <p><strong>Relevance:</strong>...</p>
+        <div>
+          <h3>Fahrenheit 451</h3>
+          <p><strong>Author:</strong> Ray Bradbury</p>
+          <p><strong>Plot Summary:</strong> In a future where books are outlawed, a fireman begins to question the oppressive society he serves.</p>
+          <div class="details">
+            <p>It explores censorship, ignorance, and the transformative power of literature.</p>
+            <p><strong>Relevance:</strong> A passionate defense of free thought and expression.</p>
+            <div class="reviews">
+              <h4>User Reviews:</h4>
+              <p>"A powerful warning against the dangers of censorship." – Jordan</p>
+              <p>"Bradbury's love for books shines through – a must-read." – Alex</p>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div class="story">
+  
+      <div class="story" onclick="toggleDetails(this)">
         <img src="images/ready_player_one.jpg" alt="Ready Player One">
-        <h3>Ready Player One</h3>
-        <p><strong>Author:</strong> Ernest Cline</p>
-        <p><strong>Plot Summary:</strong> A young man competes in a virtual reality treasure hunt set in a dystopian future where the virtual world is a refuge.</p>
-        <p><strong>Relevance:</strong>...</p>
+        <div>
+          <h3>Ready Player One</h3>
+          <p><strong>Author:</strong> Ernest Cline</p>
+          <p><strong>Plot Summary:</strong> A young man competes in a virtual reality treasure hunt set in a dystopian future.</p>
+          <div class="details">
+            <p>Set in a world where the virtual realm is a refuge for humanity.</p>
+            <p><strong>Relevance:</strong> Explores virtual reality and escapism in a digitized world.</p>
+            <div class="reviews">
+              <h4>User Reviews:</h4>
+              <p>"A love letter to geek culture with important underlying messages." – Casey</p>
+              <p>"The perfect blend of nostalgia and dystopian themes." – Drew</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-
-     <!-- Our Stories Section -->
-    <section class="Ostories">
-      <h2>Our Stories</h2>
-      <div class = "Ostory">
-          <h3>The Future of Holborn</h3>
-          <p>A speculative narrative imagining Holborn in 2035, where technology and ethics intersect.</p>
-      </div>
-      
-  </section>
   </main>
-
   <footer>
-    <p>© 2035 Holborn 2035 | Preserving History, Embracing the Future.
+    <p>© 2035 Holborn 2035 | Preserving History, Embracing the Future.</p>
   </footer>
+
+  <script>
+    function toggleDetails(storyElement) {
+      storyElement.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
