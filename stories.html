@@ -1,3 +1,11 @@
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+  @import url("css/style.css");
+</style>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,161 +14,7 @@
   <title>Stories | Nexus</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #121224, #1e1e40);
-      color: #f0f0ff;
-      line-height: 1.8;
-    }
-
-    header {
-      background: rgba(30, 30, 60, 0.95);
-      border-bottom: 3px solid #6c5ce7;
-      padding: 20px 15px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      color: #6c5ce7;
-      margin-bottom: 10px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    nav ul {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      list-style: none;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #f0f0ff;
-      font-size: 1.1rem;
-      padding: 8px 15px;
-      border-radius: 8px;
-      transition: all 0.3s ease;
-    }
-
-    nav ul li a:hover {
-      background: #6c5ce7;
-      color: #0e0e1c;
-      transform: scale(1.1);
-    }
-
-    .stories {
-      max-width: 1200px;
-      margin: 60px auto;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    }
-
-    .stories h2 {
-      font-size: 2.5rem;
-      color: #8c7aff;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .story {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 30px;
-      padding: 15px;
-      background: rgba(30, 30, 60, 0.8);
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-      overflow: hidden;
-      transition: transform 0.3s, box-shadow 0.3s;
-      position: relative;
-      cursor: pointer;
-    }
-
-    .story:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-    }
-
-    .story img {
-      width: 150px;
-      height: auto;
-      margin-right: 20px;
-      border-radius: 10px;
-    }
-
-    .story h3 {
-      font-size: 1.8rem;
-      color: #7d6dfd;
-      margin-bottom: 10px;
-    }
-
-    .story p {
-      font-size: 1rem;
-      color: #dcdcff;
-      margin-bottom: 8px;
-    }
-
-    .story .details {
-      display: none;
-      margin-top: 10px;
-    }
-
-    .story.active .details {
-      display: block;
-    }
-
-    .reviews {
-      margin-top: 15px;
-      border-top: 1px solid #6c5ce7;
-      padding-top: 10px;
-    }
-
-    .reviews h4 {
-      font-size: 1.2rem;
-      color: #9e8cff;
-      margin-bottom: 10px;
-    }
-
-    .reviews p {
-      font-size: 0.9rem;
-      color: #cfcfff;
-      margin-bottom: 8px;
-    }
-
-    footer {
-      background: rgba(30, 30, 60, 0.95);
-      text-align: center;
-      padding: 15px 0;
-      font-size: 1rem;
-      color: #aaa;
-      border-top: 3px solid #6c5ce7;
-      margin-top: 50px;
-    }
-
-    footer p {
-      margin: 0;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .story {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .story img {
-        margin: 0 0 15px 0;
-      }
-
-      .stories {
-        padding: 15px;
-      }
-    }
+    
   </style>
 </head>
 <body>
