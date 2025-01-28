@@ -1,9 +1,9 @@
 <head></head>
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <style>
-  @import url("css/style.css");
+@import url("css/style.css");
 </style>
 
 <!DOCTYPE html>
@@ -166,14 +166,14 @@
 
   </style>
   <script>
-    // Text-to-Speech Function
-    function speakText(text) {
+  // Text-to-Speech Function
+  function speakText(text) {
       const speech = new SpeechSynthesisUtterance(text);
       speech.lang = 'en-US';
       window.speechSynthesis.speak(speech);
     }
 
-    function readPageContent() {
+  function readPageContent() {
       const text = document.body.textContent || document.body.innerText;
       speakText(text);
     }
@@ -191,8 +191,8 @@
   el.classList.remove("light-mode", "dyslexia-mode");
 });
 }
-    // Color Scheme Toggle
-    function toggleColorScheme(mode) {
+  // Color Scheme Toggle
+  function toggleColorScheme(mode) {
       document.body.classList.remove("light-mode", "dyslexia-mode");
       if (mode === "light") {
         document.body.classList.add("light-mode");
@@ -270,9 +270,7 @@
       </ul>
     </section>
   </main>
-
-
-
+  
   <!-- Footer Section -->
   <footer>
     <p>©️ Nexus | Preserving History, Embracing the Future.</p>
