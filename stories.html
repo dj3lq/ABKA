@@ -1,3 +1,4 @@
+<!-- Link to external stylesheet -->
 <head>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -9,8 +10,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+   <!-- Character encoding and viewport settings for better responsiveness -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page Title -->
   <title>Stories | Nexus</title>
   <link rel="stylesheet" href="styles.css">
   <style>
@@ -18,10 +23,15 @@
 </style>
 </head>
 <body>
+  <!-- Embedded YouTube video with autoplay enabled (hidden iframe) -->
   <iframe class="hiddenFrame" width="560" height="315"
   src="https://www.youtube.com/embed/SRMDVAo6hZM?autoplay=1"frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+   <!-- Website Header -->
   <header>
     <h1>Nexus</h1>
+
+    <!-- Navigation Menu -->
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -35,10 +45,12 @@
     </nav>
   </header>
 
+  <!-- Main Content Section -->
   <main>
     <section class="stories">
       <h2>Archive</h2>
-  
+
+       <!-- Story Entry: Detroit Becomes Human -->
       <div class="story" onclick="toggleDetails(this)">
         <img src="images/detroit.jpg" alt="Detroit Becomes Human">
         <div>
@@ -56,7 +68,8 @@
           </div>
         </div>
       </div>
-  
+
+      <!-- Story Entry: Frankenstein -->
       <div class="story" onclick="toggleDetails(this)">
         <img src="images/frankenstein.jpg" alt="Frankenstein">
         <div>
@@ -74,7 +87,8 @@
           </div>
         </div>
       </div>
-  
+
+       <!-- Story Entry: Neuromancer -->
       <div class="story" onclick="toggleDetails(this)">
         <img src="images/neuromancer.jpg" alt="Neuromancer">
         <div>
@@ -92,7 +106,8 @@
           </div>
         </div>
       </div>
-  
+
+      <!-- Story Entry: The Handmaid's Tale -->
       <div class="story" onclick="toggleDetails(this)">
         <img src="images/handmaids_tale.jpg" alt="The Handmaid's Tale">
         <div>
@@ -110,7 +125,8 @@
           </div>
         </div>
       </div>
-  
+
+       <!-- Story Entry: The Hunger Games -->
       <div class="story" onclick="toggleDetails(this)">
         <img src="images/hunger_games.jpg" alt="The Hunger Games">
         <div>
@@ -128,7 +144,8 @@
           </div>
         </div>
       </div>
-  
+
+       <!-- Story Entry: Brave New World -->
       <div class="story" onclick="toggleDetails(this)">
         <img src="images/brave_new_world.jpg" alt="Brave New World">
         <div>
@@ -146,7 +163,8 @@
           </div>
         </div>
       </div>
-  
+
+       <!-- Story Entry: 1984  -->
       <div class="story" onclick="toggleDetails(this)">
         <img src="images/1984.jpg" alt="1984">
         <div>
@@ -164,7 +182,8 @@
           </div>
         </div>
       </div>
-  
+
+       <!-- Story Entry: Fahrenheit 451 -->
       <div class="story" onclick="toggleDetails(this)">
         <img src="images/fahrenheit_451.jpg" alt="Fahrenheit 451">
         <div>
@@ -182,7 +201,8 @@
           </div>
         </div>
       </div>
-  
+
+       <!-- Story Entry: Ready Player One -->
       <div class="story" onclick="toggleDetails(this)">
         <img src="images/ready_player_one.jpg" alt="Ready Player One">
         <div>
@@ -202,10 +222,13 @@
       </div>
     </section>
   </main>
+
+  <!-- Website Footer -->
   <footer>
     <p>© Nexus | Preserving History, Embracing the Future.</p>
   </footer>
 
+  <!-- JavaScript for Expanding/Collapsing Story Details -->
   <script>
     function toggleDetails(storyElement) {
       storyElement.classList.toggle('active');
