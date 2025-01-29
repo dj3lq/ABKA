@@ -1,3 +1,4 @@
+<!-- Linking External CSS -->
 <head>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -9,12 +10,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <!-- Meta settings for character encoding and responsive design -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page Title -->
   <title>Forum |Nexus</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
 
+  <!-- Internal CSS Styling -->
+  <style>
+/* General body styles */
  body {
       font-family: 'Roboto', sans-serif;
       line-height: 1.8;
@@ -23,6 +30,7 @@
       color: #f0f0ff;
     }
 
+    /* Navigation bar styling */
     nav ul {
       list-style: none;
       display: flex;
@@ -38,6 +46,7 @@
       transition: color 0.3s;
     }
 
+    /* Forum container styling */
     .forum-container {
       padding: 2rem;
       max-width: 800px;
@@ -47,6 +56,7 @@
       box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
     }
 
+     /* Forum title styling */
     .forum-container h2 {
       text-align: center;
       font-family: 'Orbitron', sans-serif;
@@ -58,6 +68,7 @@
       margin-bottom: 1rem;
     }
 
+     /* Chat log styling */
     .chat-log {
       list-style: none;
       padding: 0;
@@ -67,6 +78,7 @@
       scrollbar-width: thin;
     }
 
+     /* Styling scrollbar for better aesthetics */
     .chat-log::-webkit-scrollbar {
       width: 8px;
     }
@@ -75,6 +87,7 @@
       border-radius: 8px;
     }
 
+     /* Like and Dislike button styling */
     .like-dislike {
       margin-top: 0.5rem;
     }
@@ -101,6 +114,7 @@
       gap: 0.5rem;
     }
 
+    /* New comment input and button styling */
     .new-comment input {
       flex: 1;
       padding: 0.6rem;
@@ -127,6 +141,7 @@
       transform: scale(1.05);
     }
 
+     /* Footer styling */
     footer {
       text-align: center;
       padding: 1rem;
@@ -139,9 +154,12 @@
 </style>
 </head>
 <body>
+
+  <!-- Hidden Autoplay Video -->
  <iframe class="hiddenFrame" width="560" height="315"
   src="https://www.youtube.com/embed/WXx5-HGERcg?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-  <!-- Header Section -->
+  
+  <!-- Header Section with Navigation -->
   <header>
     <h1>Nexus</h1>
     <nav>
@@ -165,6 +183,7 @@
         <!-- Pre-existing chat logs will be displayed here -->
       </ul>
 
+      <!-- Comment Input Field -->
       <div class="new-comment">
         <input type="text" id="commentInput" placeholder="Join the conversation...">
         <button onclick="postComment()">Post Comment</button>
@@ -177,6 +196,7 @@
     <p>© Nexus | Preserving History, Embracing the Future.</p>
   </footer>
 
+  <!-- JavaScript for Forum Functionality -->
   <script>
     // Social Media-like usernames
     const usernames = [
@@ -185,7 +205,7 @@
       "@HolbornHistorian", "@LitCritic_101", "@FutureOfBooks", "@StorySeeker"
     ];
 
-    // Function to generate random time
+    // Function to generate random time for comments
     function generateRandomTime() {
       const hours = Math.floor(Math.random() * 24);
       const minutes = Math.floor(Math.random() * 60);
@@ -229,7 +249,7 @@
       }
     ];
 
-    // Function to load dummy chat logs
+    // Function to load dummy chat logs dynamically
     function loadComments() {
       const chatLog = document.getElementById('chat-log');
       chatLog.innerHTML = ''; // Clear current log
