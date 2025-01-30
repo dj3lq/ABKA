@@ -1,2 +1,4 @@
 # ABKA
-hello my minions 
+members: Andjela Rodic, Breanna Gordon, Katie chen, Ammal Samatar, Mahir Abdi
+
+
