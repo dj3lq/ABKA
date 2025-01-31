@@ -236,7 +236,7 @@ nav ul li a:hover {
   transform: scale(1.2);
 }
 
-@media(max-width: 768:px){
+@media(max-width: 768px){
   .story{
     flex-direction: column;
     align-items: center;
